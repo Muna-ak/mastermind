@@ -91,6 +91,7 @@ Avec `test=1`, l’état initial est `not-started`. Sans ce paramètre, l’API 
 - [game.js](game.js) : règles et indices ; [app.js](app.js) : interface et API.
 - [tests/contract.test.cjs](tests/contract.test.cjs) : tests des règles et du contrat ; [tests/browser.cjs](tests/browser.cjs) : parcours du navigateur.
 - [API.md](API.md) et [VERIFICATIONS.md](VERIFICATIONS.md) : documentation complémentaire.
+- [AGENTS.md](AGENTS.md) : consignes durables pour travailler sur le projet avec Codex.
 
 Maintenance : compte GitHub **Muna-ak**. Signaler un problème dans les [issues du dépôt](https://github.com/Muna-ak/mastermind/issues), avec les étapes, l’attendu, l’obtenu et le navigateur.
 
@@ -98,7 +99,7 @@ Maintenance : compte GitHub **Muna-ak**. Signaler un problème dans les [issues 
 
 La partie n’est pas sauvegardée au rechargement. L’installation comme application web n’est pas implémentée. Aucun test avec lecteur d’écran, Firefox ou l’outil de l’enseignant n’est documenté. Le retour Safari ne prouve pas une compatibilité avec tous les smartphones.
 
-Avant J1 : ajouter `AGENTS.md`, choisir et vérifier le tag **jalon-1** sur la version remise, puis déposer le document demandé sur Cyberlearn avec les liens du dépôt, du jeu et du tag. La création du tag n’est pas attestée ici. Selon l’atelier du 18 novembre, l’API n’est pas obligatoire pour J1 ; elle est déjà intégrée à ce projet.
+Les consignes de travail figurent dans [AGENTS.md](AGENTS.md). Avant J1 : choisir et vérifier le tag **jalon-1** sur la version remise, puis déposer le document demandé sur Cyberlearn avec les liens du dépôt, du jeu et du tag. La création du tag n’est pas attestée ici. Selon l’atelier du 18 novembre, l’API n’est pas obligatoire pour J1 ; elle est déjà intégrée à ce projet.
 
 ## Sources
 
