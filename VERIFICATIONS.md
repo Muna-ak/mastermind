@@ -2,6 +2,18 @@
 
 Exécutées le 11 novembre 2026 sous Windows, Node.js 24 et Microsoft Edge piloté par Playwright en mode sans interface.
 
+## Mise à jour du 18 novembre 2026
+
+Version du code vérifiée : commit `ffb86d5b8fb3edc788b3b42e7fd96614a3730b66` sur `main`. Le README et ce journal ont ensuite été actualisés sans changer le jeu.
+
+- **Tests du moteur relancés :** `node --test tests/contract.test.cjs`, sous Windows avec Node.js 24.22.3 : **17 réussites, 0 échec**.
+- **Trois scénarios ciblés dans le navigateur :** attendus inscrits avant exécution dans le README, puis appels de `window.codeSecretTest` sur les fichiers locaux dans Edge sans interface. Les empreintes Git de `game.js` et `app.js` ont été comparées à celles du commit publié et sont identiques. Cas normal : obtenu 1 bien placée, 2 mal placées, 1 essai, 1 entrée. Quatre rouges contre rouge-rouge-bleu-vert : obtenu 2 bien placées, 0 mal placée, 1 essai, 1 entrée. Proposition rouge-bleu-vert : obtenu `invalid-length`, 0 essai, 0 entrée. Tous les attendus sont satisfaits ; le compteur et le nombre de lignes jouées à l'écran ont également été contrôlés.
+- **GitHub Pages :** déploiement réussi du commit ci-dessus. Une vérification automatisée distincte sur `https://muna-ak.github.io/mastermind/` et `?test=1` a obtenu HTTP 200, permis de jouer un coup dans l'interface, confirmé l'absence de l'API en mode normal, l'état initial `not-started` et la version 0.2 en mode test. Les indices 2/2 avec répétitions, un refus `invalid-length` sans consommation, une victoire au dixième essai et un redémarrage ont été vérifiés. Aucune erreur JavaScript capturée pendant ce parcours.
+- **Essai personnel rapporté :** le jeu a été testé sur un smartphone avec Safari et fonctionne correctement selon la personne responsable du projet. Modèle, version du navigateur et étapes exactes non renseignés ; aucune conclusion exhaustive de compatibilité mobile n'en est tirée.
+- **Test croisé rapporté :** le jeu d'un camarade a été essayé à partir de son lien et fonctionnait. Aucun scénario détaillé ni retour précis sur ce projet n'a été fourni.
+
+Les sections suivantes conservent les vérifications et la correction documentées le 11 novembre.
+
 ## Moteur et contrat 0.2 : 17 tests réussis, 0 échec
 
 Commande : `node --test tests/contract.test.cjs`.
@@ -45,4 +57,4 @@ Après correction, même test : **réussi** pour les six largeurs. Les captures 
 
 ## Limites des preuves
 
-Ce sont des tests dans Edge sur ordinateur avec dimensions de fenêtre simulées. Aucun vrai smartphone, lecteur d'écran ou navigateur Safari/Firefox n'a été testé. Le contrat 0.2 fourni a servi de référence aux tests locaux ; l'outil enseignant n'a pas été fourni. La publication GitHub Pages et l'exécution sur une URL publique restent à réaliser. Les preuves ne remplacent pas les essais personnels et les éléments pédagogiques à remettre.
+Les tests automatisés sont exécutés dans Edge sur ordinateur ; les petites largeurs sont des dimensions de fenêtre simulées. L'essai sur smartphone avec Safari est un retour personnel général, sans relevé détaillé. Aucun test avec lecteur d'écran ou Firefox n'est documenté. Le contrat 0.2 fourni a servi de référence ; l'outil enseignant n'a pas été fourni. La publication et le parcours public ont été vérifiés le 18 novembre comme indiqué ci-dessus. Ces preuves ne remplacent pas les autres éléments pédagogiques à remettre.
